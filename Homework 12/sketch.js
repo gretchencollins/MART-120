@@ -25,35 +25,44 @@ var mouseShapeY;
 function setup()
 {
     createCanvas(850, 850);
-    // get a random speed when the it first starts
-    shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 3)) + 1);
-    shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 3)) + 1);
     createCharacter(200,350);
 }
 
 function draw()
 {
     background(580,25,98);
-    stroke(0);
-    fill(0);
-    
-    // call createBorders function
+    display();
+    moveShape();
+    moveShape2();
     createBorders(5);
+    exit();
+    drawCharacter();
+    characterMovement();
+    createMouse();
+    win();
+}
 
-    // exit message
+    function display()
+{
+       fill(39,145,114);
+    circle(shapeX, shapeY, 90);
+     fill(183,45,114);
+    circle(shape2X, shape2Y, 70);
+
+}
+
+function exit()
+{
+ (characterX < width-760 && characterY < width-825)
+    fill(0)
     textSize(20);
     text("EXIT", width -775,height -825)
-
-   drawCharacter();
-    characterMovement();
+}
 
 
-    // potential enemy
-    fill(39,145,114);
-    // draw the shape
-    circle(shapeX, shapeY, 90);
 
-     // get a random speed when the it first starts
+function moveShape()
+{
      shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 7)) + 2);
      shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 7)) + -5);
 
@@ -77,19 +86,15 @@ function draw()
     {
         shapeY = height;
     }
+   
+}
 
 
-
-    // potential enemy
-    fill(183,45,114);
-    // draw the shape
-    circle(shape2X, shape2Y, 70);
-
-     // get a random speed when the it first starts
-     shape2XSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 7)) + -8);
+function moveShape2()
+{
+    shape2XSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 7)) + -8);
      shape2YSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 7)) + -5);
-
-    // move the shape
+  
     shape2X += shape2XSpeed;
     shape2Y += shape2YSpeed;
     // check to see if the shape has gone out of bounds
@@ -110,20 +115,31 @@ function draw()
         shape2Y = height;
     }
 
-    // check to see if the character has left the exit
-    if(characterX < width-760 && characterY < width-825)
-    {
-        fill(0);
-        stroke(5);
-        textSize(26);
-        text("You Win!", width/2-50, height/2-50);
-    }
+}
 
+   function createMouse()
+   {
     // create the shape based on the mouse click
     fill(20,230,140);
     circle(mouseShapeX, mouseShapeY, 125);
 }
 
+     function youWin()
+ {
+    fill(0);
+    stroke(5);
+    textSize(26);
+    text("You Win!", width/2-50, height/2-50);
+}
+
+  function win()
+  {
+// check to see if the character has left the exit
+    if(characterX < width-760 && characterY < width-825)
+    {
+        youWin();
+    }
+  }
 
 function characterMovement()
 {
@@ -163,6 +179,7 @@ function drawCharacter()
 }
 function createBorders(thickness)
 {
+   fill(0)
     // top border
     rect(70,0,width,thickness);
     // left border
