@@ -1,0 +1,45 @@
+#specificTitle {
+    color: rgb(3, 194, 45);
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+}
+
+span.redColor {
+    font-size: medium;
+    font-style: oblique;
+     color: rgba(248, 98, 168, 0.777);
+     font-weight: bold;
+     font-family: 'Courier New', Courier, monospace;
+}
+
+#specificGreen {
+    font-weight: bold;
+    color: rgb(250, 100, 193);
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#specificaddress {
+    color: rgb(144, 53, 8);
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#specificLink {
+    color: rgba(255, 1, 119, 0.777);
+    font-size: xx-large;
+    font-family: fantasy; 
+}
+
+#specificDescription {
+    color: rgb(147, 121, 5);
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
