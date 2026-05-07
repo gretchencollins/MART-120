@@ -1,0 +1,17 @@
+span {
+    color: crimson;
+    background-color: chartreuse;
+}
+
+span.redColor {
+    font-size: x-large;
+    font-style: italic;
+    color: rgb(2, 0, 139);
+}
+
+#specificLink {
+    color: magenta;
+    font-size: xx-large;
+    font-family: fantasy;
+    border-color: aquamarine;
+}

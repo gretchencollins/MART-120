@@ -1,0 +1,43 @@
+<html>
+
+<head>
+   
+       <link rel="stylesheet" href="main.css">
+        <title> My third page </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+</head>
+    
+           <h1>Contct Us</h1>
+           <form action="NextPage.html" type="Post">
+            First Name: <input type="text"
+            id="fName"><br>
+            Last Name: <input type="text"
+            id="1Name"><br>
+           email address: <input type="text"
+           id="eName"><br>
+             <table>
+                <tr>
+                    <td>
+                    Do you accept terms and conditions?
+                    </td>
+                    <td>
+            <input type="radio" name="Do you accept terms and conditions?" value="yes">Yes
+             <input type="radio" name="Do you accept terms and conditions?" value="no">No
+            </td>
+            </tr>
+            </table>
+            <button id="mySubmit">Submit</button>
+            <br>
+           </form>
+           <a href="Homepage.html">Homepage</a><br>
+           <a href="SecondPage.html">Short Stories</a>
+               var conditionsName = document.getElementById("conditionsName").value;
+     if(conditionsName == "")
+    {
+       document.getElementById("conditionsName").style.backgroundColor = "red"; 
+       document.getElementById("conditionsName").focus();
+      }
+         
+</html>
